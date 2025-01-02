@@ -1,18 +1,4 @@
-class Stack {
-  constructor() {
-    this.top = -1;
-    this.items = {};
-  }
-
-  get peek() {
-    return this.items[this.top];
-  }
-
-  push(value) {
-    this.top += 1;
-    this.items[this.top] = value;
-  }
-}
+const Stack = require('/Users/gautham/Project-x/TDD/tdd-basics-project/src/stack.js');
 
 describe('My Stack', () => {
   let stack;
@@ -36,5 +22,11 @@ describe('My Stack', () => {
     expect(stack.peek).toBe('🌽');
   });
 
-  it.todo('can pop off');
+  it('can pop off', () =>{
+    stack.push('45');
+    let r = stack.pop();
+    expect(r).toBe('45');
+  })
+
+  //it.todo('can pop off');
 });
