@@ -29,4 +29,8 @@ describe('My Stack', () => {
   })
 
   //it.todo('can pop off');
+  test('can print out top of the stack', () => {
+    let r = stack.top;
+    expect(r).toBe(-1);
+  }) 
 });
